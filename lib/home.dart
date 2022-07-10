@@ -1,4 +1,5 @@
 import 'package:facebookdesign/sections/headerbuttonsection.dart';
+import 'package:facebookdesign/sections/roomsection.dart';
 import 'package:facebookdesign/sections/ststusSection.dart';
 import 'package:facebookdesign/widgets/circlebutton.dart';
 import 'package:flutter/material.dart';
@@ -32,6 +33,8 @@ class HomePage extends StatelessWidget {
             StstusSection(),
             Divider(thickness: 1),
             HeaderButtonSection(),
+            Divider(thickness: 10),
+            RoomSection(),
             Divider(thickness: 10),
           ],
         ),

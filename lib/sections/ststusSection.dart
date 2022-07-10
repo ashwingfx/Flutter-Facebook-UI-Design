@@ -1,4 +1,5 @@
 import 'package:facebookdesign/assets.dart';
+import 'package:facebookdesign/widgets/avatar.dart';
 import 'package:flutter/material.dart';
 class StstusSection extends StatelessWidget {
   const StstusSection({Key? key}) : super(key: key);
@@ -6,14 +7,15 @@ class StstusSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: /*CircleAvatar(
+      leading: Avatar(displayImage: mlal), //Refactor
+      /*CircleAvatar(
         backgroundImage: AssetImage(mlal),
         radius: 30,
-      ),*/
+      ),
       ClipRRect(
         borderRadius: BorderRadius.circular(100),
         child: Image.asset(mlal, height: 60,width: 60, fit: BoxFit.cover),
-      ),
+      ),*/
       title: TextField(
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
