@@ -7,7 +7,7 @@ class RoomSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      height: 70,
       
       child: ListView(
         scrollDirection: Axis.horizontal,
