@@ -41,7 +41,9 @@ class HomePage extends StatelessWidget {
             Divider(thickness: 10),
             StorySection(),
             Divider(thickness: 10),
-            PostCards(postCardAvatar: tovi, postProfileName: "Tovino", postPublishedAt: "6hrs",postImage: naradan,)
+            PostCards(postCardAvatar: tovi, postProfileName: "Tovino",
+                      postPublishedAt: "7hrs",postImage:dude,postTitle: "Happy Vishu!!!",),
+
           ],
         ),
       ),

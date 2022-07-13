@@ -10,8 +10,10 @@ class PostCards extends StatelessWidget {
   String postProfileName;
   String postPublishedAt;
   String postImage;
+  String postTitle;
 
-  PostCards({required this.postCardAvatar,required this.postProfileName,required this.postPublishedAt,required this.postImage});
+  PostCards({required this.postCardAvatar,required this.postProfileName,
+             required this.postPublishedAt,required this.postImage,required this.postTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -21,20 +23,20 @@ class PostCards extends StatelessWidget {
           postCardHead(),
 
           Center(
-            child: Text("Happy Diwali!"),
+            child: Text("${postTitle}"),
           ),
 
           Container(
             margin: EdgeInsets.only(top: 10,bottom: 10),
             child: Image.asset(postImage, fit: BoxFit.cover,),
-          )
-
+          ),
+          postFooterCard(),
         ],
       ),
     );
   }
 
-
+//POSTCARD HEAD
   Widget postCardHead(){
     return ListTile(
       leading:Avatar(displayImage:postCardAvatar),
@@ -46,7 +48,7 @@ class PostCards extends StatelessWidget {
       ),
       subtitle: Row(
         children: [
-          Text("${postPublishedAt}"),
+          Text(postPublishedAt == null ? " ": postPublishedAt),
           SizedBox(width: 10),
           Icon(Icons.public,size: 13,)
         ],
@@ -54,4 +56,34 @@ class PostCards extends StatelessWidget {
       trailing: Icon(Icons.more_horiz),
     );
   }
+//FOOTER SECTION
+
+  Widget postFooterCard(){
+    return Container(
+      height: 50,
+      color: Colors.amber,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            height: 50,
+            width: 150,
+            color: Colors.blue,
+            child: Row(
+              children: [
+                Icon(Icons.thumb_up),
+                Text("20K")
+              ],
+            ),
+          ),
+          Container(
+            height: 50,
+            width: 150,
+            color: Colors.deepOrangeAccent,
+          )
+        ],
+      )
+    );
+  }
+
 }
