@@ -56,6 +56,9 @@ class PostCards extends StatelessWidget {
       trailing: Icon(Icons.more_horiz),
     );
   }
+
+
+
 //FOOTER SECTION
 
   Widget postFooterCard(){
@@ -71,8 +74,12 @@ class PostCards extends StatelessWidget {
             color: Colors.blue,
             child: Row(
               children: [
-                Icon(Icons.thumb_up),
+                Container(
+                  margin: EdgeInsets.only(left: 16),
+
+              child: Icon(Icons.thumb_up),
                 Text("20K")
+                )
               ],
             ),
           ),
